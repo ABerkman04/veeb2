@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Albert Berkman, veebiprogrammeerimine 2023</title>
+	<script src="first.js" defer></script>
+</head>
+<body>
+	<img src="/banner/banner.png" alt="veebiprogrammeerimise kursuse banner">
+	<h1>Logiandmed</h1>
+	<ul>
+		<% logEntries.forEach((entry) => { %>
+			<li><%= entry %></li>
+		<% }); %>
+	</ul>
+
+	<hr>
+	<ul>
+		<li><a href="/">Avalehele</a></li>
+	</ul>
+	<hr>
+</body>
+</html>
