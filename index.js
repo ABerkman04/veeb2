@@ -27,6 +27,23 @@ app.get('/', (req, res)=>{
 	res.render('index');
 });
 
+app.get('/news', (req, res)=>{
+	res.render('news');
+});
+
+app.get('/news/add', (req, res)=>{
+	res.render('addnews');
+});
+
+app.get('/news/read', (req, res)=>{
+	res.render('readnews');
+});
+
+app.get('/news/read/:id', (req, res)=>{
+	console.log(req.params.id);
+	res.send('Vaatama uudist mille id on: ' + req.params.id);
+});
+
 app.get('/timenow', (req,res) =>{
 	const timeNow = dateInfo.timeNowET();
 	const dateNow = dateInfo.dateNowET();
