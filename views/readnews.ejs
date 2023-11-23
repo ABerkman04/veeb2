@@ -7,12 +7,17 @@
 </head>
 <body>
 	<img src="/banner/banner.png" alt="veebiprogrammeerimise kursuse banner">
-	<h1>Eesti film</h1>
+	<h1>Uudis</h1>
 	<ul>
 		<li><a href="/news">Uudiste avaleht</a></li>
 		<li><a href="/">Avalehele</a></li>
 	</ul>
 	<hr>
 	<h2>Viimased uudised</h2>
+	<ol>
+		<% filmlist.forEach(function(film, ){ %>
+			<li><%= film.title %>, sisu: <%= film.content %></li>
+		<% }); %>
+	<ol>
 </body>
 </html>
